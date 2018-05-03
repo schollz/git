@@ -12,7 +12,7 @@ func main() {
 			args = append(args[:2], append([]string{"--depth=1", "--shallow-submodules", "--no-tags", "--single-branch"}, args[2:]...)...)
 		}
 	}
-	args[0] = "git"
+	args[0] = "/usr/bin/git"
 	cmd := exec.Command(args[0])
 	if len(args) > 0 {
 		cmd = exec.Command(args[0], args[1:]...)
